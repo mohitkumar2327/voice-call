@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebRTC Voice Call</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h2>🎧 WebRTC Voice Call</h2>
+
+    <p><b>Room ID:</b> <span id="roomDisplay">None</span></p>
+    <p id="status">Status: Idle</p>
+
+    <input id="joinInput" placeholder="Paste Room ID to join" />
+
+    <br /><br />
+    
+    <button onclick="createRoom()">Create Room</button>
+    <button onclick="joinRoom()">Join Room</button>
+    <button onclick="startCall()">Call</button>
+    <button onclick="toggleMute()">Mute</button>
+    <button onclick="endCall()">End</button>
+    
+    <audio id="remoteAudio" autoplay></audio>
+    
+
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
